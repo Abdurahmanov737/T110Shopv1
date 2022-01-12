@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model HomeProductVm 
+
+@foreach (var pro in Model.Products)
+{
+
+<div class="col-lg-3">
+    <h1> <a href="/Product/Detail/@pro.ID">@pro.Name</a></h1>
+    <p>@pro.Description</p>
+    <span>@pro.Price</span>
+
+</div>
+}
